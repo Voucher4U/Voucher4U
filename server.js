@@ -12,9 +12,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
-app.get("/", (req, res) => {
-  res.json({ status: "Welcome to Voucher Management System", data: Book });
-});
+
 
 app.use("/api", require("./Router/AccountRouter.js"));
 app.use("/api", require("./Router/VoucherRouter.js"));
